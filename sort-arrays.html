@@ -1,0 +1,42 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Treinando Javascript - Metodos do Array</title>
+</head>
+<body>
+    <h1>Treinando Javascript - Metodos do Array</h1>
+    
+    <strong>sort() - para ordenar itens de arrays</strong>
+    <p>Por padrão ele ordena em ordem crescente.</p>
+    <script>
+        var arr1 = new Array(5,3,4,2,0,1);
+        arr1.sort();
+        document.write("<p>sort() : " + arr1 + "</p>");
+        console.log("sort():");
+        console.log(arr1);
+    </script>
+
+    <strong>sort() - with callback</strong>
+
+    <script>
+        var arr1 = new Array(5, 3, 4, 2, 0, 1);
+        function desc(a,b) {
+            if (a > b) {
+                return -1;
+            }
+            if (a < b) {
+                return 1;
+            }
+            if (a === b) {
+                return 0;
+            }
+        }
+        arr1.sort(desc);
+        document.write("<p>sort() : " + arr1 + "</p>");
+        console.log("sort():");
+        console.log(arr1);
+    </script>
+</body>
+</html>
